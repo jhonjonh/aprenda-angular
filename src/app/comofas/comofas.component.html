@@ -1,0 +1,143 @@
+<h3>Montando sua primeira aplicação usando Angular</h3>
+<p>
+    O objetivo deste artigo é criar uma aplicação Angular bem simples mostrando como usar a ferramenta CLI para
+    automatizar a criação de classes, serviços, etc.
+</p>
+<p>
+    Para criar essa app temos que instalar os seguintes produtos: Nodejs, TypeScript, Angular e Angular CLI e usar um
+    editor de código que para o exemplo deste artigo será o Visual Studio Code.
+</p>
+<p>
+    Todas essas ferramentas são gratuitas.
+</p>
+<h4>Recursos usados:</h4>
+<ul>
+    <li>NodeJs</li>
+    <li>Angular 12</li>
+    <li>Angular CLI</li>
+    <li>VS Code</li>
+</ul>
+<br>
+<h4>O que é o Angular CLI?</h4>
+<p>
+    O Angular CLI é o assistente oficial para criação e gerenciamento de aplicações com o Angular.(tanto na versão 2
+    como na versão 4)
+</p>
+<p>
+    Ele automatiza tarefas de criação de projetos, componentes, serviços, filtros , módulos, diretivas, etc. facilitando
+    assim a vida do desenvolvedor.
+</p>
+<p>
+    Na tabela abaixo temos os comandos e o recurso a ser criado:
+</p>
+<table class="table table-light">
+    <thead class="thead-light">
+        <tr>
+            <th>O que se deseja criar</th>
+            <th>Comando Usado</th>
+        </tr>
+    </thead>
+
+    <tr>
+        <td>Componente (component)</td>
+        <td>ng g component nome-do-componente</td>
+    </tr>
+    <tr>
+        <td>Diretiva (directive)</td>
+        <td>ng g directive nome-da-diretiva</td>
+    </tr>
+    <tr>
+        <td>Filtro (pipe)</td>
+        <td>ng g pipe nome-do-filtro</td>
+    </tr>
+    <tr>
+        <td>Serviço (service)</td>
+        <td>ng g service nome-do-servico</td>
+    </tr>
+    <tr>
+        <td>Módulo (module)</td>
+        <td>ng g module nome-do-modulo</td>
+    </tr>
+</table>
+<br>
+<h4>Verificando o Ambiente</h4>
+<p>
+    Vamos criar uma aplicação chamada Tarefas e antes de continuar você deve verificar se o seu ambiente esta com todos
+    os recursos instalados.
+    Para fazer isso digite os comandos a seguir em um terminal de comando:(Estou usando o PowerShell)
+</p>
+<img src="assets/img/tutorial-1.png" class="img-fluid" alt="turotial">
+<ol>
+    <li>Verificar versão do NodeJs: <b>node -v</b></li>
+    <li>Verificar versão do TypeScript: <b>tsc -v</b></li>
+    <li>Verificar versão do Angular CLI: <b>ng version</b></li>
+</ol><br>
+<p>
+    Com o seu ambiente devidamente configurado crie uma pasta onde você deseja guardar o projeto. Para o exemplo deste artigo eu criei uma pasta chamada Angular4. 
+</p>
+<h4>Criando a aplicação Tarefas usando o Angular CLI</h4>
+<p>
+    Entre na pasta Angular4 e crie a aplicação Tarefas usando o comando : <b>ng new Tarefas </b> 
+</p>
+<img src="assets/img/tutorial-2.png" class="img-fluid" alt="totorial">
+<p>Durante a execução estão sendo realizadas as seguintes tarefas:</p>
+<ul>
+    <li>Um novo diretório chamado Tarefas é criado;</li>
+    <li>Todos os arquivos e diretórios de origem para a sua nova aplicação angular são criados com base no guia oficial de Estilo Angular;</li>
+    <li>As dependências NPM são instaladas;</li>
+    <li>O TypeScript será configurado para você;</li>
+    <li>O executor de testes unitários Karma será configurado para você;</li>
+    <li>O framework de teste end-to-end Protractor será configurado para você;</li>
+    <li>Os arquivos de ambiente com configuração padrão são criados;</li>
+</ul>
+<p>
+    Note que são criados os arquivos e as pastas necessárias para a nossa aplicação e que as dependências já foram instaladas na pasta <em> node_modules</em>. 
+</p><br>
+<h4>Abrindo o projeto no VS Code</h4>
+<img src="assets/img/tutorial-3.png" class="img-fluid" alt="totorial">
+<p>Ao termino do processo vamos entrar na pasta Tarefas e abrir o projeto no Visual Studio Code digitando : code .</p>
+<p>Veremos o projeto aberto no VS Code exibindo os seguintes arquivos:</p>
+<img src="assets/img/tutorial-4.png" class="img-fluid" alt="totorial">
+<br>
+<p>Eu destaquei apenas os arquivos principais:</p>
+<ol>
+    <li><b>"e2e" - </b>pasta contendo os arquivos de testes e configurações para realizar testes;</li>
+    <li><b>"node_modules" - </b>pasta contendo todos os pacotes restaurados a partir das dependências definidas no arquivo package.json;</li>
+    <li><b>"src/ - </b>pasta da aplicação principal que contém a pasta app, os templates HTML, os componentes, módulos, etc.;</li>
+    <li><b>"app" - </b>pasta contendo o arquivo de  módulo, e componente, sua view, arquivo de estilo, testes, etc.;</li>
+    <li><b>"main.ts" - </b>arquivo que inicia a aplicação; </li>
+    <li><b>"tsconfig.json, index.html, etc" - </b>arquivos essenciais necessários para rodar a aplicação;</li>
+    <li><b>"packages.json" - </b>contém a referência a todos os pacotes necessários para a nossa aplicação Angular 2;</li>
+</ol>
+<p>Na pasta <b>app</b> temos os seguintes arquivos:</p>
+<ul>
+    <li><b>app.component.css - </b>arquivo de estilo;</li>
+    <li><b>app.component.html - </b>arquivo html contendo código HTML que será exibido na view;</li>
+    <li><b>app.compoent.spec.ts - </b>arquivo de testes;</li>
+    <li><b>app.component.ts - </b>arquivo principal que possui a lógica da aplicação;</li>
+    <li><b>app.module.ts - </b>arquivo de módulo que agrupa os componentes, diretivas, pipes e serviços usados na aplicação</li>
+</ul>
+<p><em>Obs:  Neste exemplo eu não vou criar testes e por isso não vou criar arquivos de testes e vou remover os arquivos terminados em *spec.ts</em></p>
+<br>
+<p>Para executar a aplicação digite : <em>ng serve</em> e a seguir abra o navegador na seguinte URL :  <b>http://localhost:4200</b>  </p>
+<p>Deverá aparecer o html padrão do Angular conforme a imagem abaixo:</p>
+<img src="assets/img/default.png" class="img-fluid" alt="totorial">
+<p>Muito bem! Nossa aplicação está funcionando! Nos bastidores, acontece o seguinte:</p>
+<ol>
+    <li>o Angular CLI carrega a sua configuração a partir do arquivo angular-cli.json</li>
+    <li>o Angular CLI executa o Webpack para construir e agregar todo o código JavaScript e CSS<li>
+    <li>o Angular CLI inicia o servidor Webpack dev para pré-visualizar o resultado em localhost: 4200</li>
+</ol>
+<p>
+    Se você espiar a janela de comandos vai notar que o comando ng serve, que levanta a aplicação, não retorna para o seu prompt de comando. 
+</p>
+<p>
+    Em vez disso, e porque ele inclui o suporte LiveReload, o processo monitora ativamente a sua pasta src para carregar arquivos. Quando uma mudança em qualquer arquivo do projeto for detectada ele vai atualizar a página automaticamente.
+</p>
+<p>
+    Se quiser encerrar o processo digite <kbd>CTRL</kbd>+<kbd>C</kbd> na janela de comandos. Isso vai parar o servidor e encerrar sua aplicação.
+</p>
+
+<a href="http://www.macoratti.net/17/10/ang2_appcli1.htm"
+        class="fonte">Fonte - Macoratti</a><br>
+

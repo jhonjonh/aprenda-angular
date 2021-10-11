@@ -1,0 +1,133 @@
+<div class="text-justify">
+    <h3>O que compõe uma aplicação em Angular?</h3><br>
+    <p>
+        As aplicações em Angular seguem a estrutura modular. Os aplicativos Angular conterão muitos módulos, cada um
+        dedicado a uma única finalidade. Normalmente, o módulo é um grupo coeso de código integrado aos outros módulos
+        para executar seus aplicativos Angular.
+    </p>
+
+    <p>
+        Um módulo exporta algumas classes, funções e valores de seu código. O componente é um bloco fundamental do
+        Angular e vários componentes compõem seu aplicativo.
+    </p>
+    <p>
+        Um módulo pode ser uma biblioteca para outro módulo. Por exemplo, a biblioteca angular2 / core, que é um módulo
+        principal da biblioteca Angular, será importada por outro componente.
+    </p>
+    <p>
+        Essencialmente, abordaremos as principais partes que compõem uma aplicação em Angular:
+    </p>
+    <ul>
+        <li><b>Módulos</b></li>
+        <li><b>Componentes</b></li>
+        <li><b>Serviços</b></li>
+        <li><b>Rotas (routes)</b></li>
+        <li><b>Diretivas (directives)</b></li>
+        <li><b>Pipes</b></li>
+    </ul><br><br>
+
+
+    <h3>Módulos</h3>
+    <img src="assets/img/madeof.png" class="img-fluid" alt="">
+    <p>
+        Um módulo angular é um conjunto de componentes básicos angulares, como componentes , diretivas , serviços etc.
+        Um aplicativo pode ter mais de um módulo.
+
+        Um módulo pode ser criado usando o @NgModuledecorador.
+    </p>
+    <p>
+
+        Um módulo no Angular 12 é algo feito de componentes, diretivas, serviços etc. Um ou muitos módulos se combinam
+        para criar um aplicativo. Aplicação de separação de módulos em partes lógicas de código. Cada módulo executa uma
+        única tarefa.
+
+        Os componentes no Angular 12 são classes nas quais você escreve sua lógica para a página que deseja exibir. Os
+        componentes controlam a exibição (html). Os componentes se comunicam com outros componentes e serviços.
+    </p><br>
+    <h3>Componentes</h3>
+    <p>
+        Um componente é um dos blocos de construção básicos de um aplicativo Angular. Um aplicativo pode ter mais de um
+        componente. Em um aplicativo normal, um componente contém um arquivo de classe da página de exibição em HTML, um
+        arquivo de classe que controla o comportamento da página HTML e o arquivo CSS / scss para estilizar sua exibição
+        em HTML. Um componente pode ser criado usando o @Componentdecorador que faz parte do @angular/coremódulo.
+    </p><br>
+    <h3>Serviços</h3>
+    <p>
+        Os serviços angulares são objetos singleton que são instanciados apenas uma vez durante o tempo de vida de um
+        aplicativo. Eles contêm métodos que mantêm os dados ao longo da vida de um aplicativo, ou seja, os dados não são
+        atualizados e estão disponíveis o tempo todo. O principal objetivo de um serviço é organizar e compartilhar
+        lógica de negócios, modelos ou dados e funções com diferentes componentes de uma aplicação Angular.
+    </p>
+    <p>
+        A separação de interesses é a principal razão pela qual os serviços Angular surgiram. Um serviço Angular é um
+        objeto sem estado e fornece algumas funções muito úteis. Essas funções podem ser chamadas de qualquer componente
+        do Angular, como controladores, diretivas, etc. Isso ajuda a dividir o aplicativo da web em unidades lógicas
+        pequenas e diferentes que podem ser reutilizadas.
+    </p>
+
+    <h3>Rotas</h3>
+
+    <p>
+        O Angular nos fornece um esquema de rotas e navegação completo, simples e fácil de utilizar, incluindo um
+        esquema de guardas de rotas para implementar segurança em nossos Apps.
+        No Angular, muita coisa é modularizada, e as rotas não são diferentes. Ao criar uma aplicação Angular, somos
+        indagados sobre o uso das mesmas (Would you like to add Angular Routing?), e ao responder “Yes”, já temos tudo
+        que precisamos para o roteamento.
+    </p>
+    <p>
+        Na verdade, tudo que precisamos para ter rotas em nossa aplicação é um arquivo de módulo das rotas e importá-lo
+        posteriormente no Root Module.
+    </p>
+    <p>
+        As rotas são definidas por dois elementos principais, o Path, que é o caminho (URL) e o Componente, que é o
+        componente a ser carregado. Ainda existem outras formas de carregar páginas mais eficientes, como carregamento
+        assíncrono, via módulos, mas este é assunto para um próximo artigo.
+    </p><br>
+    <h3>Diretivas</h3>
+    <p>
+        As diretivas são marcadores em um elemento DOM (como um atributo) que informam ao Angular para anexar um
+        comportamento especificado a um elemento existente.
+
+        As diretivas existem desde o AngularJS; na nova versão são usadas com componentes, principalmente para criar
+        tags personalizadas em uma aplicação Angular. Existem muitas diretivas prontas que podemos usar e também podemos
+        criar nossas próprias diretivas.
+
+        Algumas diretivas podem mudar completamente a estrutura da saída do template do componente. Essas diretivas
+        podem alterar o layout do DOM adicionando e removendo elementos DOM de visualização. Podemos classificar essas
+        diretivas em estruturais :
+    </p>
+    <ul>
+        <li>NgIf</li>
+        <li>NgFor</li>
+        <li>NgSwitch, NgSwitchWhen, NgSwitchDefault</li>
+    </ul>
+    <p>
+        Outras diretivas podem simplesmente alterar a aparência dos itens gerados pelo modelo. Vamos chamar essas diretivas não estruturais :
+    </p>
+    <ul>
+        <li>NgClass</li>
+        <li>NgStyle</li>
+        <li>NgControlName</li>
+        <li>NgModel</li>
+    </ul><br>
+    <h3>Pipes</h3>
+<p>
+    Cada aplicativo começa com o que parece ser uma tarefa simples: obter dados, transformá-los e mostrá-los. Obter dados pode ser tão simples quanto criar uma variável local ou tão complexo quanto transmitir dados por meio de um WebSocket. Quando os dados chegam, você pode enviar seus valores brutos diretamente para a visualização, mas isso raramente contribui para uma boa experiência do usuário 
+</p>
+<p>
+    Para exibir corretamente os dados o Angular desenvolveu o que chamamos de pipe, os quais permitem transformar uma dados antes de ser exibido diretamente ao usuário.  
+</p>
+
+<div style="height:100px"></div>
+
+
+
+    <a href="https://qastack.com.br/programming/40073941/whats-the-difference-between-an-angular-component-and-module"
+        class="fonte">Fonte 1 - QA Stack</a><br>
+    <a href="https://dumildematos.medium.com/o-que-%C3%A9-um-servi%C3%A7o-no-angular-e-por-que-us%C3%A1-lo-2c8b441618cf"
+        class="fonte">Fonte 2 - Dumilde Matos</a><br>
+    <a href="http://www.macoratti.net/18/06/ang_diret1.htm" class="fonte">Fonte 3 - Macoratti</a> <br> 
+    <a href="https://receitasdecodigo.com.br/angular/o-que-sao-pipes-no-angular-6" class="fonte">Fonte 4 - Receitas de Código</a>  <br>
+
+
+</div>
